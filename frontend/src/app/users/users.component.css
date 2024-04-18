@@ -1,0 +1,45 @@
+/* Adicione esses estilos no seu arquivo users.component.css */
+
+.scrollable-table {
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  }
+  
+  .mat-elevation-z8 {
+    width: 100%; /* A tabela ocupa a largura total de seu contêiner */
+  }
+  
+  /* Estilos para dispositivos com largura até 600px */
+  @media (max-width: 600px) {
+    .scrollable-table {
+      -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos com iOS */
+    }
+  
+    /* Ocultar os cabeçalhos de colunas e mostrar apenas o conteúdo */
+    .mat-header-cell {
+      display: none;
+    }
+  
+    .mat-cell {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px; /* Espaçamento para melhor toque */
+    }
+  
+    /* Exibir ações também em dispositivos pequenos */
+    .mat-column-actions {
+      width: auto;
+      min-width: 80px; /* Espaço suficiente para ícones de ação */
+    }
+  
+    /* Customizar a visualização da lista dentro das células */
+    .mat-cell ul {
+      padding: 0;
+      list-style: none; /* Remove estilos padrão de lista */
+      margin: 0;
+    }
+  
+    .mat-cell li {
+      padding: 2px 0; /* Espaçamento vertical para os itens */
+    }
+  }
+  

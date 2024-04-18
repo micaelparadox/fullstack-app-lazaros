@@ -1,0 +1,13 @@
+<div *ngIf="userProfiles">
+    <ul>
+      <li *ngFor="let userProfile of userProfiles">
+        {{ userProfile.name }}
+        <ul>
+          <li *ngFor="let profile of userProfile.profiles">
+            {{ profile.description }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
